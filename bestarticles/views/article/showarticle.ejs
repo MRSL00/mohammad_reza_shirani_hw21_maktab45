@@ -1,0 +1,28 @@
+<%- include("../partials/header.ejs",{page:"showarticle"}); %>
+
+
+
+    <body>
+        <%- include("../partials/navbar.ejs",{page:"showarticle"}); %>
+            <div id="cover">
+                <div class="jumbotron jumbotron-fluid" id="/images/covers/<%= article[0].cover %>">
+                    <div class="container">
+                        <h1 class="title display-3 text-center" style="font-weight:100;">
+                            <%= article[0].title %>
+                        </h1>
+                        <p class="lead string-1 text-center">by <%= article[0].author.username %> </p>
+                        <p class="lead string-1 text-center">Create At <%= article[0].createdAt.getFullYear() %>/<%= article[0].createdAt.getMonth() %>/<%= article[0].createdAt.getDate() %> at
+                            <%= article[0].createdAt.getHours() %>:<%= article[0].createdAt.getMinutes() %>:<%= article[0].createdAt.getSeconds() %> </p>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="content">
+                <h1>welcome</h1>
+                <%- article[0].content %> 
+            </div>
+            <script src="/javascripts/showarticle.js"></script>
+    </body>
+
+    </html>
